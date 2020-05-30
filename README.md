@@ -3,8 +3,10 @@
 
 
 ### 前言
+> 此项目进支持允许在Windows环境下。
 
 本项目依赖于jintellitype项目，请先阅读项目 data/doc目录下的jintellitype使用教程.md
+
 
 
 
@@ -103,15 +105,30 @@ tts(input);//再进行语音合成
 ```
 
  - 如: 语音合成地方换成一些 讯飞，百度提供的SDK 可以进行倍速朗读。
-
  - 如：根据此思路，可以联想一下，微信读书的实现思路，他们更复杂，可能涉及到图像识别，语音合成等。而且还要买书的版权-_-;
 但是如果自己有思路了，是不是可以自己实现一个微信读书软件，那样就不用付费了。
+ - 如：按CtrlQ时，如果剪切板不是文本，而是一张图片呢？是否可以进行OCR操作，将图片转换成文本，再进行语音合成？
+ 
+ 如果你有好的想法欢迎扩展.
+
+
+### 相关链接
+
+[Github](https://github.com/dahuoyzs/CtrlCQ)
+
+[Gitee](https://gitee.com/dahuoyzs/CtrlCQ)
+
+
+
+### 作者信息
 
 
 ```json
-"github":"https://github.com/dahuoyzs",
-"email":"dahuoyzs@gmail.com",
-"QQ":"835476090"
+{
+	"github": "https://github.com/dahuoyzs",
+	"email": "dahuoyzs@gmail.com",
+	"QQ": "835476090"
+}
 ```
 
 2020年5月
