@@ -1,0 +1,1 @@
+start /min java -jar CtrlCQ-jar-with-dependencies.jar
