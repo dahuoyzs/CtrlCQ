@@ -15,9 +15,10 @@ exports.buildContextMenu = function buildContextMenu(tray) {
     let submenu = new Array(10);
     for(let i = 1;i<10;i++){
         submenu[i] = {
-            label: '语速'+i,
+            label: 'spd'+i,
             click: function (menuItem, browserWindow, event) {
                 menuItem.checked = true;
+                console.log(menuItem.label);
                 menuItem.label = ">"+menuItem.label;
                 console.log(menuItem.label);   
             }
