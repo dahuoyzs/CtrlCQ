@@ -25,9 +25,9 @@ CtrlCQ呢就是Ctrl+C和Ctrl+Q的组合 其实也就是 windows电脑上常用�
 
 ```shell
 #下载
-git clone http://xxx.git
+git clone https://gitee.com/dahuoyzs/CtrlCQ.git
 #进入目录
-cd crtlcq-electron
+cd CtrlCQ/crtlcq-electron
 #安装依赖
 npm install
 #运行
