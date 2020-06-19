@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>语音和合成博客朗读器</title>
+    <script type="text/javascript">
+      const {clipboard,remote,ipcRenderer} = require('electron');
+      //发个消息到主进程去
+      // ipcRenderer.send('asynchronous-message', 'ping');
+      //接收主进程发送的消息
+      // ipcRenderer.on('asynchronous-reply', (event, arg) => {
+      //     console.log(arg) // prints "pong"
+      // })
+
+      let content = encodeURI(clipboard.readText());
+      // ipcRenderer.send('asynchronous-clipboard', content);
+      // let url = "http://fanyi.baidu.com/gettts?spd=3&lan=zh&text=" + content + "&source=web";
+      let url = "http://tsn.baidu.com/text2audio?&lan=zh&tok=24.fd0ea7a66937cb5b6d6632c826926aaa.2592000.1594977939.282335-9613883&ctp=1&cuid=B8:88:E3:E8:8A:DE&spd=9&pit=5&vol=15&per=0&tex="+content;
+      
+      var mp3 = new Audio(url);
+      mp3.play();
+  	</script>
+  </head>
+  
+  <body></body>
+
+</html>

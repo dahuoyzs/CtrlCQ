@@ -1,0 +1,36 @@
+{
+  "name": "ctrlcq",
+  "version": "1.0.0",
+  "description": "语音合成助手",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron .",
+    "dist": "electron-builder",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.2",
+    "electron-builder": "^22.7.0",
+    "png-to-ico": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.github.dahuoyzs.ctrlcq",
+    "mac": {
+      "target": ["dmg","zip"]
+    },
+    "win": {
+      "target": ["nsis","zip"]
+    },
+    "nsis":{
+      "oneClick":false,
+      "allowToChangeInstallationDirectory":true,
+      "createDesktopShortcut":true,
+      "runAfterFinish":true
+    }
+  }
+
+
+}
