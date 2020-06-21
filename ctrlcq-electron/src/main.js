@@ -28,9 +28,9 @@ function createTray() {
     // 添加右键菜单到系统托盘区
     tray.setContextMenu(appMenu.buildContextMenu(tray))
     // 添加双击事件
-    tray.on('double-click',()=>{   
-        showWinodw();
-    });
+    // tray.on('double-click',()=>{   
+    //     showWinodw();
+    // });
     return tray
 }
 
