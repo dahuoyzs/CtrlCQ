@@ -33,15 +33,7 @@ exports.buildContextMenu = function buildContextMenu(tray) {
     let submenu = new Array(9);
     for(let i = 0;i<9;i++){
         let spd = i+1;
-        submenu[i] = {
-<<<<<<< HEAD
-            label: 'spd'+i,
-            click: function (menuItem, browserWindow, event) {
-                menuItem.checked = true;
-                console.log(menuItem.label);
-                menuItem.label = ">"+menuItem.label;
-                console.log(menuItem.label);   
-=======
+        submenu[i] = { 
             id: spds[i],
             label: '语速'+spd,
             type: 'checkbox',
@@ -50,8 +42,6 @@ exports.buildContextMenu = function buildContextMenu(tray) {
                 menuItem.checked = true;
                 dataStore.setSpd(spd);
                 closeMenuChecked(spds[i],menu);
-
->>>>>>> dev
             }
         }
     }
