@@ -1,7 +1,3 @@
-
-
-
-
 # CtrlCQ
 
 
@@ -19,10 +15,6 @@ CtrlCQ呢就是Ctrl+C和Ctrl+Q的组合 其实也就是 windows电脑上常用�
 
 为啥这样说话？UC给钱了。（开个玩笑。~_~）
 
-
-
-
-
 ### 目录结构
 
 ```
@@ -30,6 +22,34 @@ ctrlcq
 ├── ctrlcq-electron 	electron实现(推荐)
 └── ctrlcq-java			java实现
 
+```
+
+### 操作 
+
+**ctrlcq-electron版本操作**
+
+```shell
+#下载
+git clone https://gitee.com/dahuoyzs/CtrlCQ.git
+#进入目录
+cd CtrlCQ/ctrlcq-electron
+#安装依赖
+npm install
+#运行
+npm run start
+#打包
+npm run build
+```
+
+**ctrlcq-java版本操作**
+
+```shell
+#下载
+git clone https://gitee.com/dahuoyzs/CtrlCQ.git
+#进入目录
+cd CtrlCQ/ctrlcq-java
+#打包
+mvn clean package
 ```
 
 
@@ -54,23 +74,12 @@ ctrlcq
 
 ### 作者
 
+[大火yzs](https://gitee.com/dahuoyzs)
 
+[Saron](https://gitee.com/Saron123_admin)
 
 
 
 ### 日期
 
 2020年6月
-
-
-
-
-
-
-
-
-
-
-
-
-
