@@ -1,9 +1,18 @@
-# CtrlCQ
+<div align="center">
+<h1>📝文本朗读器</h1>
+<img src="https://img.shields.io/github/license/ystcode/BlogHelper"/>
+<img src="https://img.shields.io/static/v1?label=electron&message=9.0.4&color="/>
+<img src="https://img.shields.io/static/v1?label=java&message=1.8&color="/>
+<img src="https://img.shields.io/static/v1?label=mac|win|linux&message=7.0.0&color=yellow"/>
+</div>
+
+
 
 > 此项目短小精悍。核心代码不到200行。极为简单。快来看一看吧。
->
 
-### 项目介绍
+
+
+### 📌项目介绍
 
 世界之大，无奇不有。大家好。欢迎观看本文档。
 “CtrlCQ”是怎么回事呢？“Ctrl+C”相信大家都很熟悉，但是“CtrlCQ”又是怎么回事呢，
@@ -18,32 +27,50 @@ CtrlCQ呢就是Ctrl+C和Ctrl+Q的组合 其实也就是 windows电脑上常用�
 
 
 
-### 当前版本运行效果图
-
-
+### 📌预览
 
 ![image-20200621181320074](https://gitee.com/dahuoyzs/res/raw/master/img/image-20200621181320074.png)
 
 
 
-### 目录结构
+预览图可能版本过低，请以具体应用为准。
+
+
+
+### 📥[点击下载](https://gitee.com/dahuoyzs/CtrlCQ/releases/v0.2.0-beta)
+
+### 🙋[我要提需求](https://gitee.com/dahuoyzs/CtrlCQ/issues)
+
+
+
+### 📌目录结构
 
 ```
 ctrlcq
 ├── ctrlcq-electron 	electron实现(推荐)
-└── ctrlcq-java			java实现
+├───── build                      -- 构建时一些依赖
+├───── data                  	   -- 项目相关的一些文件
+├───── dist                       -- 打包目录
+├───── public                     -- 资源文件
+└───── src                        -- 源代码
 
+├── ctrlcq-java			java实现
+├── frame                      -- 窗口类
+├── listenter                  -- 监听器
+├── tts                        -- tts
+├── url                        -- 工具类
+└── App                        -- 多文件实现的启动类
+└── Reader                     -- 单文件实现的启动类
 ```
 
-### 操作 
 
-**ctrlcq-electron版本操作**
+
+### 📌ctrlcq-electron版本操作
 
 ```shell
 #下载
 git clone https://gitee.com/dahuoyzs/CtrlCQ.git
 #进入目录
-
 cd CtrlCQ/ctrlcq-electron
 #安装依赖
 npm install
@@ -53,7 +80,7 @@ npm run start
 npm run build
 ```
 
-#### npm run build时出错
+##### npm run build时出错
 
 > https://github.com/electron/electron/releases/
 > 下载对应的包，并放入到此目录下
@@ -61,9 +88,7 @@ npm run build
 
 
 
-
-
-**ctrlcq-java版本操作**
+### 📌ctrlcq-java版本操作
 
 ```shell
 #下载
@@ -74,9 +99,7 @@ cd CtrlCQ/ctrlcq-java
 mvn clean package
 ```
 
-
-
-### 注意事项
+##### 注意事项
 
 如需设置开机自启动，请将exe放入此目录
 
@@ -84,7 +107,7 @@ mvn clean package
 
 
 
-### 相关链接
+### 📌相关链接
 
 [Github](https://github.com/dahuoyzs/CtrlCQ)
 
@@ -92,9 +115,7 @@ mvn clean package
 
 
 
-
-
-### 作者
+### 📌关于作者
 
 [大火yzs](https://gitee.com/dahuoyzs)
 
@@ -102,6 +123,15 @@ mvn clean package
 
 
 
-### 日期
+### 📌日期
 
 2020年6月
+
+
+
+🙏如果帮助到你了，请帮忙点亮[Gitee](https://giteecom/dahuoyzs/CtrlCQ)右上角小星星，这将是我持续更新的动力！
+
+❗本项目使用GPL开源协议，使用了本项目代码的项目也必须使用 GPL 协议开源。
+
+
+
