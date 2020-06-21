@@ -42,6 +42,16 @@ npm run start
 npm run build
 ```
 
+#### npm run build时出错
+
+> https://github.com/electron/electron/releases/
+> 下载对应的包，并放入到此目录下
+> C:\Users\bigfire\AppData\Local\electron\Cache
+
+
+
+
+
 **ctrlcq-java版本操作**
 
 ```shell
