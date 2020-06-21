@@ -1,6 +1,7 @@
 # CtrlCQ
 
-
+> 此项目短小精悍。核心代码不到200行。极为简单。快来看一看吧。
+>
 
 ### 项目介绍
 
@@ -14,6 +15,16 @@ CtrlCQ呢就是Ctrl+C和Ctrl+Q的组合 其实也就是 windows电脑上常用�
 好了这就是关于 CtrlCQ  的所有介绍了。大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！
 
 为啥这样说话？UC给钱了。（开个玩笑。~_~）
+
+
+
+### 当前版本运行效果图
+
+
+
+![image-20200621181320074](https://gitee.com/dahuoyzs/res/raw/master/img/image-20200621181320074.png)
+
+
 
 ### 目录结构
 
@@ -71,7 +82,7 @@ mvn clean package
 
 > C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
 
-此项目短小精悍。核心代码不到200行。极为简单。快来看一看吧。
+
 
 ### 相关链接
 
