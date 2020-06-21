@@ -58,9 +58,9 @@ npm run build
 #下载
 git clone https://gitee.com/dahuoyzs/CtrlCQ.git
 #进入目录
-cd CtrlCQ/crtlcq-java
-=======
 cd CtrlCQ/ctrlcq-java
+#打包成可点击运行的jar包
+mvn clean package
 ```
 
 
