@@ -36,6 +36,13 @@ npm run start
 npm run build
 ```
 
+```
+npm run build时出错
+https://github.com/electron/electron/releases/tag/v9.0.4
+下载对应的包，并放入到此目录下
+C:\Users\bigfire\AppData\Local\electron\Cache
+```
+
 ### 目录结构
 
 ```
@@ -74,7 +81,8 @@ data/doc
 
 
 ### 作者
-
+[大火yzs](https://gitee.com/dahuoyzs)
+[Saron](https://gitee.com/Saron123_admin)
 
 
 
