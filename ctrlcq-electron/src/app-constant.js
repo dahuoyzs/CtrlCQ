@@ -1,0 +1,6 @@
+exports.github = 'https://github.com/dahuoyzs/CtrlCQ'
+exports.gitee = 'https://gitee.com/dahuoyzs/CtrlCQ'
+exports.issues = 'https://gitee.com/dahuoyzs/CtrlCQ/issues'
+exports.releases = 'https://github.com/dahuoyzs/CtrlCQ/releases'
+exports.mail = 'dahuoyzs@gmail.com'
+exports.download = 'https://github.com/dahuoyzs/CtrlCQ/releases'

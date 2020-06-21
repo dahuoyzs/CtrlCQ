@@ -1,7 +1,3 @@
-
-
-
-
 # CtrlCQ
 
 
@@ -36,7 +32,8 @@ ctrlcq
 #下载
 git clone https://gitee.com/dahuoyzs/CtrlCQ.git
 #进入目录
-cd CtrlCQ/crtlcq-electron
+
+cd CtrlCQ/ctrlcq-electron
 #安装依赖
 npm install
 #运行
@@ -52,8 +49,8 @@ npm run build
 git clone https://gitee.com/dahuoyzs/CtrlCQ.git
 #进入目录
 cd CtrlCQ/crtlcq-java
-#打包
-mvn clean package
+=======
+cd CtrlCQ/ctrlcq-java
 ```
 
 
@@ -78,23 +75,12 @@ mvn clean package
 
 ### 作者
 
+[大火yzs](https://gitee.com/dahuoyzs)
 
+[Saron](https://gitee.com/Saron123_admin)
 
 
 
 ### 日期
 
 2020年6月
-
-
-
-
-
-
-
-
-
-
-
-
-

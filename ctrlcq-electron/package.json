@@ -1,15 +1,17 @@
 {
   "name": "ctrlcq",
-  "version": "1.0.0",
+  "author": "dahuoyzs",
+  "version": "0.2.0",
   "description": "语音合成助手",
   "main": "src/main.js",
   "scripts": {
     "dev": "electron .",
     "start": "electron .",
     "dist": "electron-builder",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "mac": "electron-builder --mac",
+    "ico": "png-to-ico build/app.png > build/app.ico"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^9.0.2",
@@ -17,23 +19,53 @@
     "png-to-ico": "^2.1.0"
   },
   "dependencies": {
-    "electron-store": "^5.1.0"
+    "electron-store": "^5.2.0"
   },
   "build": {
     "appId": "com.github.dahuoyzs.ctrlcq",
+    "productName":"文本朗读器",
     "mac": {
-      "target": ["dmg","zip"]
+      "icon": "build/app.icns",
+      "type": "development",
+      "category": "public.app-category.productivity",
+      "artifactName": "${productName}_setup_${version}.${ext}",
+      "target": [
+        "dmg"
+      ]
     },
     "win": {
-      "target": ["nsis","zip"]
+      "icon": "build/app.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
     },
-    "nsis":{
-      "oneClick":false,
-      "allowToChangeInstallationDirectory":true,
-      "createDesktopShortcut":true,
-      "runAfterFinish":true
+    "linux": {
+      "icon": "build/app.png",
+      "category": "Office",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true
+    },
+    "dmg": {
+      "contents": [{
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+      },
+      {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+      }]
     }
   }
-
 
 }

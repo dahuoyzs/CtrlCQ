@@ -2,13 +2,30 @@
 <html>
 <head>
 	<title>CtrlCQ</title>
+    <script type="text/javascript">
+		//此文件再未加载
 
+		const {clipboard,remote,ipcRenderer} = require('electron');
+		const DataStore = require('./app-store')
+		const dataStore = new DataStore()
+		//获取速度配置
+		let playContent = dataStore.getPlayContent();
+		//读取剪切板内容
+		let content = encodeURI(clipboard.readText());
+
+		</script>
 </head>
 <body>
 
-<p>Ctrl+C   copy</p>
-<p>Ctrl+Q  reader。</p>
-<p>选中任意文本CtrlCQ即可</p>
+<h2>
+	要朗读的文本
+</h2>
+
+<textarea rows="10" cols="50">
+Ctrl+C   copy。
+Ctrl+Q  reader。
+选中任意文本CtrlCQ即可
+</textarea>
 
 </body>
 </html>

@@ -1,106 +1,82 @@
 
-const {Menu,app} = require('electron')
+const {Menu,app,shell} = require('electron')
 const appToast = require('./app-toast')
+const DataStore = require('./app-store')
+const dataStore = new DataStore()
 
-//此方法不行
-// const applition = require('./main.js')
-
-
+let spds = ['spd1','spd2','spd3','spd4','spd5','spd6','spd7','spd8','spd9']
+function myGetMenuItemById(id, myMenu) {
+    const items = myMenu.items
+    let found = items.find(item => item.id === id) || null
+    for (let i = 0, length = items.length; !found && i < length; i++) {
+        if (items[i].submenu) {
+            found = myGetMenuItemById(id, items[i].submenu)
+        }
+    }
+    return found
+}
+/**
+ * 关闭除ID外的其他checked
+ */
+function closeMenuChecked(id, menu) {
+    for (let myId of spds) {
+        if (id !== myId) {
+            myGetMenuItemById(myId, menu).checked = false
+        }
+    }
+}
 
 exports.buildContextMenu = function buildContextMenu(tray) {
 	// 菜单栏引用
     let menu;
 
-
-    let submenu = new Array(10);
-    for(let i = 1;i<10;i++){
+    let submenu = new Array(9);
+    for(let i = 0;i<9;i++){
+        let spd = i+1;
         submenu[i] = {
+<<<<<<< HEAD
             label: 'spd'+i,
             click: function (menuItem, browserWindow, event) {
                 menuItem.checked = true;
                 console.log(menuItem.label);
                 menuItem.label = ">"+menuItem.label;
                 console.log(menuItem.label);   
+=======
+            id: spds[i],
+            label: '语速'+spd,
+            type: 'checkbox',
+            checked: false,
+            click: function (menuItem, browserWindow, event) {
+                menuItem.checked = true;
+                dataStore.setSpd(spd);
+                closeMenuChecked(spds[i],menu);
+
+>>>>>>> dev
             }
         }
     }
 
     const template = [
         {
-            label: '打开主页',
+            label: '语速设置',
+            submenu:submenu
+        },
+        {
+            label: 'Github',
             click: () => {
-                appToast.toast({title:"标题",body:"打开主页"})
-                // applition.showWinodw();
+                shell.openExternal(require('./app-constant').github).catch()
             }
         },
         {
-            label: '语速设置',
-            submenu:submenu
-            // submenu: [{
-            //     label: '语速1',
-            //     click: function (menuItem, browserWindow, event) {
-            //         console.log(menuItem.checked);
-            //         menuItem.checked = true;
-            //         console.log(menuItem.checked);
-            //         // appToast.toast({title:"语速设置",body:menuItem})
-            //     }
-            // }, {
-            //     label: '语速2',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为2"})
-            //     }
-            // }, {
-            //     label: '语速3',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为3"})
-            //     }
-            // }, {
-            //     label: '语速4',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为4"})
-            //     }
-            // }, {
-            //     label: '语速5',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为5"})
-            //     }
-            // }, {
-            //     label: '语速6',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为6"})
-            //     }
-            // }, {
-            //     label: '语速7',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为7"})
-            //     }
-            // }, {
-            //     label: '语速8',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为8"})
-            //     }
-            // }, {
-            //     label: '语速9',
-            //     click: function () {
-            //         // menuItem.checked = true
-            //         appToast.toast({title:"语速设置",body:"语速设置为9"})
-            //     }
-            // }]
-            // click: () => {
-            //     appToast.toast({title:"标题",body:"语速设置"})
-            // }
+            label: 'Gitee',
+            click: () => {
+                shell.openExternal(require('./app-constant').gitee).catch()
+            }
         },
         {
-            label: '关于软件',
+            label: '反馈',
             click: () => {
-                appToast.toast({title:"标题",body:"关于软件"})
+                shell.openExternal(require('./app-constant').issues).catch()
             }
         },
 		{

@@ -6,8 +6,6 @@ const appMenu = require('./app-menu')
 
 // 监听程序准备就绪
 app.on('ready', () => {
-    //初始化窗体
-    // showWinodw();
     // 隐藏系统任务栏
     hiddenTaskbar()
     // 创建托盘
@@ -20,19 +18,6 @@ app.on('ready', () => {
 app.on('window-all-closed', () => {
    //to do
 })
-
-//创建主窗体
-let mainWinodw = null;
-function showWinodw() {
-    if(mainWinodw==null){
-        mainWinodw = new BrowserWindow({ width: 300, height: 300,show: true});
-        //关闭时清空对象
-        mainWinodw.on('closed', function() {
-            mainWinodw = null;
-        });
-        mainWinodw.loadURL('file://' + __dirname + '/main.html');
-    }
-}
 
 //创建托盘图标
 function createTray() {
@@ -61,16 +46,4 @@ function hiddenTaskbar() {
     }
 }
 
-//注册网页消息异步监听事件 - msg
-ipcMain.on('asynchronous-message', (event, arg) => {
-    console.log(arg)  // prints "ping"
-    //给网页端回消息
-    event.sender.send('asynchronous-reply', 'pong')
-});
 
-//注册网页消息异步监听事件 - msg
-ipcMain.on('asynchronous-clipboard', (event, arg) => {
-    console.log(arg)  // prints "ping"
-    //给网页端回消息
-    event.sender.send('asynchronous-clipboard-reply', 'pong')
-});

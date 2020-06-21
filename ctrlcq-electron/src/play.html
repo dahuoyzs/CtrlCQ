@@ -4,21 +4,24 @@
   <head>
     <title>语音和合成博客朗读器</title>
     <script type="text/javascript">
-      const {clipboard,remote,ipcRenderer} = require('electron');
-      //发个消息到主进程去
-      // ipcRenderer.send('asynchronous-message', 'ping');
-      //接收主进程发送的消息
-      // ipcRenderer.on('asynchronous-reply', (event, arg) => {
-      //     console.log(arg) // prints "pong"
-      // })
 
+      const {clipboard,remote,ipcRenderer} = require('electron');
+
+      const DataStore = require('./app-store')
+      const dataStore = new DataStore()
+      //获取速度配置
+      let spd = dataStore.getSpd();
+      //读取剪切板内容
       let content = encodeURI(clipboard.readText());
-      // ipcRenderer.send('asynchronous-clipboard', content);
+
       // let url = "http://fanyi.baidu.com/gettts?spd=3&lan=zh&text=" + content + "&source=web";
-      let url = "http://tsn.baidu.com/text2audio?&lan=zh&tok=24.fd0ea7a66937cb5b6d6632c826926aaa.2592000.1594977939.282335-9613883&ctp=1&cuid=B8:88:E3:E8:8A:DE&spd=9&pit=5&vol=15&per=0&tex="+content;
+      let url = "http://tsn.baidu.com/text2audio?&lan=zh&tok=24.fd0ea7a66937cb5b6d6632c826926aaa.2592000.1594977939.282335-9613883&ctp=1&cuid=B8:88:E3:E8:8A:DE&spd="+spd+"&pit=5&vol=15&per=0&tex="+content;
       
+      //h5自带Audio控件 播放音频
       var mp3 = new Audio(url);
+      //播放音频
       mp3.play();
+
   	</script>
   </head>
   
