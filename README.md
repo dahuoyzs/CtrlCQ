@@ -1,6 +1,6 @@
 <div align="center">
 <h1>📝文本朗读器</h1>
-<img src="https://img.shields.io/github/license/ystcode/BlogHelper"/>
+<img src="https://img.shields.io/github/license/dahuoyzs/CtrlCQ"/>
 <img src="https://img.shields.io/static/v1?label=electron&message=9.0.4&color="/>
 <img src="https://img.shields.io/static/v1?label=java&message=1.8&color="/>
 <img src="https://img.shields.io/static/v1?label=mac|win|linux&message=7.0.0&color=yellow"/>
@@ -123,13 +123,26 @@ mvn clean package
 
 
 
+### 📌推荐个阿里大牛的项目
+
+
+
+### 📝[写作助手](https://github.com/ystcode/BlogHelper)
+
+> - 一键发布本地文章到知乎、简书、博客园、CSDN、掘金、SegmentFault(思否)、开源中国等平台。
+> - 支持的图床有：新浪、图壳、SM.MS、Github、Imgur、七牛云、腾讯云、阿里云、又拍云
+
+此项目编写过程中也大量学习该项目中的一些代码。感谢🙏
+
+
+
 ### 📌日期
 
 2020年6月
 
 
 
-🙏如果帮助到你了，请帮忙点亮[Gitee](https://giteecom/dahuoyzs/CtrlCQ)右上角小星星，这将是我持续更新的动力！
+🙏如果帮助到你了，请帮忙点亮[Gitee](https://giteecom/dahuoyzs/CtrlCQ)右上角小星星，这将使我写小呆萌(小demo)更有动力！
 
 ❗本项目使用GPL开源协议，使用了本项目代码的项目也必须使用 GPL 协议开源。
 
