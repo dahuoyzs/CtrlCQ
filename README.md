@@ -39,9 +39,9 @@ CtrlCQ呢就是Ctrl+C和Ctrl+Q的组合 其实也就是 windows电脑上常用�
 
 ### 📥[点击下载](https://gitee.com/dahuoyzs/CtrlCQ/releases/v0.2.0-beta)
 
-[ 文本朗读器 Setup 0.2.0.exe](https://oss.bigfire.cn/bigfire-image/soft/%E6%96%87%E6%9C%AC%E6%9C%97%E8%AF%BB%E5%99%A8%20Setup%200.2.0.exe)
+[ 文本朗读器 Setup 0.2.0.exe](https://oss.bigfire.cn/soft/%E6%96%87%E6%9C%AC%E6%9C%97%E8%AF%BB%E5%99%A8%20Setup%200.2.0.exe)
 
-[ 文本朗读器-0.2.0-win.zip](https://oss.bigfire.cn/bigfire-image/soft/%E6%96%87%E6%9C%AC%E6%9C%97%E8%AF%BB%E5%99%A8-0.2.0-win.zip)
+[ 文本朗读器-0.2.0-win.zip](https://oss.bigfire.cn/soft/%E6%96%87%E6%9C%AC%E6%9C%97%E8%AF%BB%E5%99%A8-0.2.0-win.zip)
 
 ### 🙋[我要提需求](https://gitee.com/dahuoyzs/CtrlCQ/issues)
 
